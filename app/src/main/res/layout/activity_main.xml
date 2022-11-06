@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"
+    android:padding="15dp">
+
+    <TextView
+        android:id="@+id/title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:text="Kotlin Fundamental Quiz"
+        android:textColor="@color/black"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/question_one"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:textColor="@color/black"
+        android:textSize="16sp"
+        android:text="1: Who is the developer of Kotlin?"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/title" />
+
+    <RadioGroup
+        android:id="@+id/question_one_options"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/question_one">
+
+        <RadioButton
+            android:id="@+id/radio_google"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Google" />
+
+        <RadioButton
+            android:id="@+id/radio_idea"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Intellij IDEA" />
+
+        <RadioButton
+            android:id="@+id/radio_jetbrains"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="JetBrains" />
+    </RadioGroup>
+
+    <TextView
+        android:id="@+id/question_two"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:textColor="@color/black"
+        android:textSize="16sp"
+        android:text="2: ___ is a way to restrict direct access to some of an object’s fields."
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/question_one_options" />
+
+    <LinearLayout
+        android:id="@+id/question_two_options"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/question_two">
+        <CheckBox
+            android:id="@+id/check_score"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Score"/>
+        <CheckBox
+            android:id="@+id/check_Encapsulation"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Encapsulation"/>
+        <CheckBox
+            android:id="@+id/check_LiveData"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="LiveData"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="15dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:flow_horizontalGap="20dp">
+        <Button
+            android:id="@+id/button_clear"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:backgroundTint="@color/white"
+            android:insetTop="0dp"
+            android:insetBottom="0dp"
+            android:textColor="@color/purple_500"
+            app:strokeColor="@color/grey"
+            android:text="Clear"
+            app:strokeWidth="1dp" />
+
+        <Space
+            android:layout_width="20dp"
+            android:layout_height="wrap_content"/>
+
+        <Button
+            android:id="@+id/button_submit"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:insetTop="0dp"
+            android:insetBottom="0dp"
+            android:text="Submit" />
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
